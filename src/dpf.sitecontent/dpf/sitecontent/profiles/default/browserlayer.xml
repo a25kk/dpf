@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+    name="dpf.sitecontent"
+    interface="dpf.sitecontent.interfaces.IDpfSitecontentLayer"
+  />
+</layers>

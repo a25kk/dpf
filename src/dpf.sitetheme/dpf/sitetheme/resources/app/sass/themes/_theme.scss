@@ -1,0 +1,73 @@
+//
+// Main site theme
+// --------------------------------------
+
+
+//== Main content area
+//
+//## Provides optional fullscreen layouts
+
+.app-wrapper {
+   @include media-breakpoint-up(lg) {
+    background: transparent url("../assets/img/top.png") repeat-x scroll 0px 19px;
+   }
+
+}
+
+.template-frontpage-view .app-wrapper {
+   @include media-breakpoint-up(lg) {
+    background: transparent url("../assets/img/top-fp.png") repeat-x scroll 0px 20px;
+   }
+
+}
+
+.app-main {
+  @extend .container;
+    @include media-breakpoint-up(md) {
+      padding: .3rem 0 0 0;
+      background: #fff;
+      border-left: 16px solid #fff;
+      border-right: 16px solid #fff;
+  }
+}
+
+.app-content {
+    @include make-row();
+}
+
+//** Add full height to layout components
+.app-content-aside,
+.app-content-main {
+    @include make-col()
+}
+
+.app-content-aside {
+    @include make-col-span(12);
+    @include media-breakpoint-up(md) {
+        @include make-col-span(4);
+        padding: 0 1rem 1rem 1rem;
+    }
+}
+
+.app-content-main {
+    @include make-col-span(12);
+    @include media-breakpoint-up(md) {
+        @include make-col-span(8);
+        padding: 0 1rem 0 0;
+    }
+}
+
+.app-aside {
+  flex: 0 0 100%;
+    @include media-breakpoint-up(sm) {
+        flex: 0 0 15rem;
+        width: 15rem;
+        padding: 1rem 1rem 1rem 0;
+        &-inverse {
+          position: absolute;
+          top: 0;
+          right: 0;
+          border: 1px solid blue;
+        }
+    }
+}

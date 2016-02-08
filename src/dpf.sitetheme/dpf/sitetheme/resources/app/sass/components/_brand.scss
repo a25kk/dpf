@@ -1,0 +1,83 @@
+//
+// Brand
+// -----------------------------------------
+
+
+// Make a gridrow
+.app-brand {
+    // display: flex;
+    @include make-row();
+    align-items: center;
+    margin-right: $spacer;
+    &-panel-inverse {
+        width: 100%;
+    }
+
+}
+
+//** Inline svg logo
+.app-brand-img {
+    display: block;
+    width: 100%;
+    .app-brand-panel & {
+        @include make-col();
+        @include make-col-span(12);
+        @include media-breakpoint-up(md) {
+            @include make-col-span(6);
+        }
+    }
+}
+
+.app-brandname-logo {
+    width: 100%;
+    margin: 2rem 0 1rem 0;
+    path {
+        fill: #fff;
+    }
+    .app-header-brandbar & {
+        @include media-breakpoint-up(sm) {
+        }
+    }
+}
+
+// The actual brandname/title
+.app-brand-title {
+    //@include make-md-column(8);
+}
+
+.app-brandname {
+    display: block;
+    padding: $spacer 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.25;
+    color: $app-primary;
+    .app-brand-panel & {
+        flex: 1;
+        @include media-breakpoint-up(md) {
+            flex: 0 0 66.6666%;
+        }
+        margin-top: -($spacer);
+    }
+    .app-brand-panel-inverse & {
+        font-size: 1.25rem;
+        line-height: 1;
+        color: #fff;
+        @include media-breakpoint-up(md) {
+            flex: 0 0 75%;
+        }
+    }
+    @include media-breakpoint-up(sm) {
+        font-size: 1.65rem;
+    }
+}
+
+// Sitewide claim
+.app-brand-aside {
+    @include make-col();
+    @include make-col-span(4);
+}
+
+.app-logo-mobile {
+    padding: $spacer $spacer 0 $spacer;
+}

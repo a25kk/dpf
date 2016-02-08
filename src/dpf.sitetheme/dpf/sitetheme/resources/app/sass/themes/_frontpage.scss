@@ -1,0 +1,17 @@
+.app-top {
+		background: transparent;
+		@include gradient-y($app-primary, $app-secondary, 0%, 100%);
+}
+
+.app-frontpage {
+	width: 100%;
+	padding: 0;
+}
+
+.app-intro {
+	width: 100%;
+	.app-intro-content {
+		background: #eee;
+		padding: 3rem 2rem 2rem 2rem;
+	}
+}

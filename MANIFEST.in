@@ -1,0 +1,2 @@
+graft src/dpf
+include *.cfg *.rst *.in

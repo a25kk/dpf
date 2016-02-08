@@ -1,0 +1,78 @@
+//
+// Frontpage NewsItems listing
+// -----------------------------------------
+
+.app-news-panel-header {
+    @extend .container;
+}
+
+// News listing
+.app-news-list {
+    display: block;
+    @extend .container;
+    padding-top: $spacer;
+    padding-bottom: ($spacer * 2);
+}
+
+.app-news-list-item {
+    @include media-breakpoint-up(sm) {
+        @include make-row();
+    }
+    min-height: 200px;
+    margin-bottom: ($spacer * 2);
+}
+
+.app-news-list-item-aside,
+.app-news-list-item-main {
+    @include media-breakpoint-up(sm) {
+        @include make-col();
+    }
+}
+
+.app-news-list-item-aside {
+    @include media-breakpoint-up(sm) {
+        @include make-col-span(4);
+    }
+    //padding-right: ($spacer * 6);
+}
+
+.app-news-list-item-main {
+    @include media-breakpoint-up(sm) {
+        @include make-col-span(8);
+    }
+    padding: 2rem 1rem 1rem;
+    background-color: $app-gray;
+}
+
+// News image anchor item
+.app-news-list-item-anchor {
+    display: block;
+}
+
+
+.app-news-list-item-title {
+    font-size: 1.2rem;
+    // flex: 0 0 100%;
+    a {
+        color: $app-primary;
+        font-weight: 700;
+    }
+}
+
+.app-news-list-item-abstract {
+    // flex: 0 0 100%;
+}
+
+.app-news-list-item-actions {
+    text-align: right;
+    // flex: 0 0 100%;
+    // align-self: flex-end;
+    a {
+        color: $app-primary;
+    }
+
+}
+
+.app-news-list-link {
+    color: $app-primary;
+}

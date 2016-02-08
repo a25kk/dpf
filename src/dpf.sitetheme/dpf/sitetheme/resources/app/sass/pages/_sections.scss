@@ -1,0 +1,12 @@
+
+.app-section-cards {
+    .app-card {
+        flex: 0 0 50%;
+        @include media-breakpoint-down(md) { 
+        flex: 0 0 100%; 
+    }
+        @include media-breakpoint-down(sm) { 
+        flex: 0 0 100%; 
+        }
+    }
+} 

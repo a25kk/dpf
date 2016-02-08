@@ -1,0 +1,90 @@
+//
+// Application settings and variables
+// -------------------------------------------------
+
+
+//== Colors
+//
+//## Brand colors used across the project
+$color-meteorite:             rgba(62, 39, 148, 1);
+$color-humming-bird:          rgba(57, 97, 145, 1);
+
+$app-blue-primary:            rgba(131, 207, 240, 1);
+$app-blue-secondary:          rgba(213, 237, 249, 1);
+$app-brown:                   rgba(159, 123, 15, 1);
+$app-green:                   rgba(9, 130, 39, 1);
+$app-red:                     rgba(144, 7, 7, 1);
+$app-violet:                  rgba(227, 220, 236, 1);
+$app-purple:                  rgba(86, 37, 128, 1);
+
+// Gray baseline
+$app-gray:                    rgba(238, 238, 238, 1);
+$app-gray-dark:               rgba(225, 225, 225, 1); // #e2e1e1
+
+// Brand primary (blue)
+// $app-primary:                   rgba(5, 81, 125, 1);
+// $app-secondary:                 rgba(55, 116, 151, 1);
+// Brand danger
+$app-danger:                    $app-red;
+
+
+//== Brand and Section specific variables
+//
+//## Used in mixin and modifier classes
+
+//** Primary brand color
+$app-primary-base:              $color-meteorite !default;
+$app-primary-darker:            darken($app-primary-base, 15%)  !default;
+$app-primary-dark:              darken($app-primary-base, 7.5%) !default;
+$app-primary:                   $app-primary-base               !default; // #3b2489
+$app-primary-light:             lighten($app-primary-base, 7.5%) !default;
+$app-primary-lighter:           lighten($app-primary-base, 15%) !default;
+
+//** Secondary brand color
+$app-secondary-base:              $color-humming-bird !default;
+$app-secondary-darker:            darken($app-secondary-base, 15%)  !default;
+$app-secondary-dark:              darken($app-secondary-base, 7.5%) !default;
+$app-secondary:                   $app-secondary-base               !default; // #d5edf9
+$app-secondary-light:             lighten($app-secondary-base, 7.5%) !default;
+$app-secondary-lighter:           lighten($app-secondary-base, 15%) !default;
+
+
+//** Brand primary color schema used as default
+$app-default:                 $app-primary-base;
+$app-section-default:         $app-primary-base;
+
+//** eda / Evangelische Diakonissenanstalt Augsburg
+$app-eda-primary:				rgba(63, 39, 148, 1);
+$app-eda-secondary:				rgba(40, 18, 79, 1);
+
+//** dpf / die Stadtklinik im Diako
+$app-dpf-primary:				rgba(57, 97, 145, 1);
+$app-dpf-secondary:				rgba(63, 39, 148, 1);
+
+//** dps / die Pflegeschulen des Diako
+$app-dps-primary:				rgba(146, 80, 153, 1);
+$app-dps-secondary:				rgba(63, 39, 148, 1);
+
+//** dfs / die Fachakademie für Sozialpädagogik des Diako
+$app-dfs-primary:				rgba(0, 147, 185, 1);
+$app-dfs-secondary:				rgba(63, 39, 148, 1);
+
+//** dpf / das Pauline Fisher Haus
+$app-dpf-primary:				rgba(131, 168, 213, 1);
+$app-dpf-secondary:				rgba(63, 39, 148, 1);
+
+//** dhp / das Hotel am alten Park 
+$app-dhp-primary:				rgba(183, 196, 67, 1);
+$app-dhp-secondary:				rgba(111, 144, 38, 1);
+
+//** drz / restaurant zeit.los  
+$app-drz-primary:				rgba(255, 153, 255, 1);
+$app-drz-secondary:				rgba(196, 30, 100, 1);
+
+//** dgp / Gesundheitspartner
+$app-dgp-primary:				rgba(63, 39, 148, 1);
+$app-dgp-secondary:				rgba(40, 18, 79, 1);
+
+//** Font awesome font path
+$fa-font-path:                  "../assets/fonts";
+

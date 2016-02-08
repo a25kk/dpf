@@ -1,0 +1,118 @@
+/* ---- Banner ---- */
+
+.app-banner {
+    height: 370px;
+    min-height:370px;
+    background: transparent;
+    @extend.container;
+    overflow: hidden;
+}
+
+/* ---- Single banner item ---- */
+//
+//## This part will be filled dynamically with
+//## content and a lazyloaded background image
+
+.app-banner-content {
+  border-top: .3rem solid #fff;
+}
+
+.app-banner-item {
+  position: relative;
+  height: 100%;
+  min-height: 370px;
+  width: 100%;
+  background-size: cover !important;
+  background-position: top center;
+}
+
+.app-banner-item-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0 1rem 0;
+  color: #fff;
+  min-height: 100px;
+  @include gradient-y(transparent, #000, 0%, 100%);
+}
+
+.app-banner-item-body {
+  color: #fff;
+  padding: 0rem 6rem 6rem 3rem;
+  width: 100%;
+}
+
+.app-baner-item-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  @include media-breakpoint-up(sm) {
+    @include pull-right;
+  }  
+}
+
+.app-banner-item-description {
+  font-size: 0.9rem;
+}
+
+.app-banner-text {
+  font-size: 0.9rem;
+  a {
+    color: #fff;
+  }
+}
+
+/* ---- flickity overrides ---- */
+
+.flickity-prev-next-button {
+  background: transparent;
+}
+
+.flickity-prev-next-button .arrow {
+  fill: #fff;
+}
+
+.flickity-prev-next-button:hover {
+    background: none;
+}
+
+.flickity-page-dots {
+    text-align: right;
+    bottom: 10px !important;
+    padding-right: 1rem;
+}
+
+.flickity-page-dots .dot {
+    background: #fff;
+}
+
+/* ---- static banner ---- */
+
+.app-staticbanner {
+  height: 123px;
+  background: transparent url("../assets/img/sb01.jpg") repeat-x scroll top center;
+  background-size: cover;
+  body.template-frontpage-view & {display: none;} //nothing to display on homepage
+  .app-banner-item-title {
+    padding-top: 5rem;
+    padding-left: 1rem;
+    color: #fff;
+    font-size: 1.4rem;
+  }
+}
+
+.app-corporate-wrapper {
+  border: 0px solid red;
+  @extend.container;
+
+  .app-coporate-logo {
+    width: 160px;
+    height: 160px;
+    margin-top: -78px;
+    margin-right: 6rem;
+    z-index: 200000000;
+    position: relative;
+    //right: 0;
+
+    @include pull-right;
+  }
+}
