@@ -139,7 +139,7 @@
         font-size: 0.9rem;
      }
     &:hover {
-        color: $app-blue-primary;
+        color: $app-violet;
         background-color: transparent;
         text-decoration: none;
     }
@@ -152,7 +152,7 @@
         display: flex;
     }
     @include when-inside('.active') {
-        color: $app-blue-primary;
+        color: $app-violet;
         background-color: transparent;
         text-decoration: none;
     }
