@@ -20,10 +20,10 @@
     display: block;
     width: 100%;
     .app-brand-panel & {
-        @include make-col();
-        @include make-col-span(12);
+        
+        @include make-col(12);
         @include media-breakpoint-up(md) {
-            @include make-col-span(6);
+            @include make-col(6);
         }
     }
 }
@@ -74,8 +74,7 @@
 
 // Sitewide claim
 .app-brand-aside {
-    @include make-col();
-    @include make-col-span(4);
+    @include make-col(4);
 }
 
 .app-logo-mobile {
