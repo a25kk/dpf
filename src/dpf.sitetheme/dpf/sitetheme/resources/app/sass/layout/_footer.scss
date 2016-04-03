@@ -59,12 +59,53 @@
     }
 }
 
-.map {
-    flex: 0 0 100% !important;
+.adress {
+    a {
+        color: #fff !important;
+    }
     @include media-breakpoint-up(sm) {
-        flex: 0 0 50% !important;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
     @include media-breakpoint-up(lg) {
-        flex: 0 0 66.6666% !important;
+        flex: 0 0 25%;
+        max-width: 25%;
     }
 }
+
+.map {
+    @include media-breakpoint-up(sm) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    @include media-breakpoint-up(lg) {
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+}
+
+.template-frontpage-view {
+    .adress {
+    @include media-breakpoint-up(sm) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    @include media-breakpoint-up(lg) {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}
+
+.map {
+    @include media-breakpoint-up(sm) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    @include media-breakpoint-up(lg) {
+        flex: 0 0 66.6666%;
+        max-width: 66.6666%;
+    }
+}
+
+}
+
