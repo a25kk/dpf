@@ -1,0 +1,82 @@
+// News
+
+.newsImage {
+  @extend.img-fluid;
+  margin-bottom: 1rem;
+}
+
+.tileImage {
+  @extend .img-fluid;
+  float: left;
+}
+
+.portaltype-news-item {
+  .leadImage  {
+    display: none;
+  }
+}
+
+.app-page-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    @include media-breakpoint-up(sm) {
+      font-size: 2rem;
+    }
+  }
+
+.tileHeadline {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.option {
+  display: block;
+}
+.userrole-member {
+  margin-left: -60px !important;
+}
+
+// Listing
+
+.app-news-wrapper {
+  @include make-row();
+  border-bottom: 1px solid $app-gray;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  .app-news-left {
+      @include make-col(12);
+  }
+  .app-news-right {
+      @include make-col(12);
+  }
+}
+
+.app-summary-wrapper {
+  @include make-row();
+  border-bottom: 1px solid $app-gray;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  .app-summary-left {
+    @include make-col(12);
+    margin-bottom: 1rem;
+    @include media-breakpoint-up(sm) {
+        @include make-col(4);
+        margin-bottom: 0;
+    }
+  }
+  .app-summary-right {
+    @include make-col(12);
+    @include media-breakpoint-up(sm) {
+      @include make-col(8);
+    }
+  }
+}
+
+.back {
+  background: $app-primary;
+  border-color: $app-primary;
+  a {
+    color: #fff;
+  }
+}

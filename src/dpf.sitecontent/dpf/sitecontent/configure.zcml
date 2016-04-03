@@ -29,4 +29,9 @@
         type="theme"
     />
 
+    <utility
+        provides="dpf.sitecontent.interfaces.IResponsiveImagesTool"
+        factory="dpf.sitecontent.imagetool.ResponsiveImagesTool"
+        />
+
 </configure>
