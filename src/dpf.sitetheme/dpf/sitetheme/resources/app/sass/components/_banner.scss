@@ -38,16 +38,18 @@
 
 .app-banner-item-body {
   color: #fff;
-  padding: 0rem 6rem 6rem 3rem;
+  padding: 0rem 2rem;
   width: 100%;
+  @include media-breakpoint-up(sm) {
+    text-align: right;
+    padding: 0rem 6rem 6rem 3rem;
+  }  
 }
 
 .app-baner-item-title {
   font-size: 1.4rem;
-  font-weight: 500;
-  @include media-breakpoint-up(sm) {
-    @include pull-right;
-  }  
+  font-weight: 700;
+  
 }
 
 .app-banner-item-description {

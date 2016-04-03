@@ -12204,7 +12204,7 @@ div.riform .label
 {
     .app-navitem-tab
     {
-        font-size: .9rem;
+        font-size: 1rem;
     }
 }
 .app-navitem-tab:hover
@@ -12531,7 +12531,7 @@ textarea
 }
 .app-brandname-logo path
 {
-    fill: #5b2281;
+    fill: #fff;
 }
 
 .app-brandname
@@ -12706,13 +12706,24 @@ img[data-sizes='auto']
     width: 100%;
 }
 
+.app-actionbar
+{
+    margin-top: 1rem;
+}
+
 .app-actions
 {
-    font-size: .85rem; 
+    font-size: .85rem;
 
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display:         flex;
+    width: 100%; 
+
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+.app-actions .btn-group
+{
+    width: 100%;
 }
 
 .app-action
@@ -12722,7 +12733,7 @@ img[data-sizes='auto']
     text-align: center; 
 
     color: #fff;
-    background: #396191;
+    background: #d4f3fc;
 
     -webkit-flex: 1;
         -ms-flex: 1;
@@ -12736,8 +12747,10 @@ img[data-sizes='auto']
 
 .app-action-search
 {
+    margin-bottom: .5rem; 
+
     color: #396191;
-    background: #eee; 
+    background: #eee;
 
     -webkit-flex: 1;
         -ms-flex: 1;
@@ -12760,7 +12773,7 @@ img[data-sizes='auto']
 
 .app-searchbox-field
 {
-    width: 66.6666%;
+    width: 75%;
 
     border-color: #eee; 
     background-color: #eee;
@@ -12788,34 +12801,32 @@ img[data-sizes='auto']
 
 .app-searchbox-btn
 {
-    color: #fff;
-    border-color: #d4f3fc; 
-    background-color: #d4f3fc;
+    width: 25%;
 
-    -webkit-flex: 0 0 33.3333%;
-        -ms-flex: 0 0 33.3333%;
-            flex: 0 0 33.3333%;
+    color: #fff;
+    border-color: #5b2281; 
+    background-color: #5b2281;
 }
 .app-searchbox-btn:hover
 {
     color: #fff;
-    border-color: #9be3f8; 
-    background-color: #a4e6f9;
+    border-color: #391551; 
+    background-color: #3f1759;
 }
 .app-searchbox-btn:focus,
 .app-searchbox-btn.focus
 {
     color: #fff;
-    border-color: #9be3f8; 
-    background-color: #a4e6f9;
+    border-color: #391551; 
+    background-color: #3f1759;
 }
 .app-searchbox-btn:active,
 .app-searchbox-btn.active,
 .open > .app-searchbox-btn.dropdown-toggle
 {
     color: #fff;
-    border-color: #9be3f8;
-    background-color: #a4e6f9;
+    border-color: #391551;
+    background-color: #3f1759;
     background-image: none;
 }
 .app-searchbox-btn:active:hover,
@@ -12829,22 +12840,54 @@ img[data-sizes='auto']
 .open > .app-searchbox-btn.dropdown-toggle.focus
 {
     color: #fff;
-    border-color: #5dd2f4; 
-    background-color: #83dcf6;
+    border-color: #14071c; 
+    background-color: #2b103c;
 }
 .app-searchbox-btn.disabled:focus,
 .app-searchbox-btn.disabled.focus,
 .app-searchbox-btn:disabled:focus,
 .app-searchbox-btn:disabled.focus
 {
-    border-color: #d4f3fc; 
-    background-color: #d4f3fc;
+    border-color: #5b2281; 
+    background-color: #5b2281;
 }
 .app-searchbox-btn.disabled:hover,
 .app-searchbox-btn:disabled:hover
 {
-    border-color: #d4f3fc; 
-    background-color: #d4f3fc;
+    border-color: #5b2281; 
+    background-color: #5b2281;
+}
+.app-searchbox-btn .fa
+{
+    margin: 0 auto;
+}
+
+.app-action-left
+{
+    width: 75%;
+
+    text-align: left;
+}
+
+.dropdown-menu
+{
+    font-size: .9rem; 
+
+    padding: 1rem;
+}
+.dropdown-menu ul
+{
+    padding-left: 1rem; 
+
+    list-style: none;
+}
+
+.app-action-right
+{
+    width: 25%;
+
+    color: #fff; 
+    background: #5b2281;
 }
 
 /* ---- Banner ---- */
@@ -12895,22 +12938,24 @@ img[data-sizes='auto']
 .app-banner-item-body
 {
     width: 100%; 
-    padding: 0rem 6rem 6rem 3rem;
+    padding: 0rem 2rem;
 
     color: #fff;
+}
+@media (min-width: 544px)
+{
+    .app-banner-item-body
+    {
+        padding: 0rem 6rem 6rem 3rem; 
+
+        text-align: right;
+    }
 }
 
 .app-baner-item-title
 {
     font-size: 1.4rem;
-    font-weight: 500;
-}
-@media (min-width: 544px)
-{
-    .app-baner-item-title
-    {
-        float: right !important;
-    }
+    font-weight: 700;
 }
 
 .app-banner-item-description
@@ -13172,40 +13217,67 @@ body.template-frontpage-view .app-pathbar
 
 .app-card
 {
-    color: #fff; 
-
-    -webkit-flex: 0 0 33.3333%;
-        -ms-flex: 0 0 33.3333%;
-            flex: 0 0 33.3333%;
+    color: #fff;
+}
+.no-flexbox .app-card
+{
+    display: table-cell;
 }
 .app-card a
 {
-    font-weight: 400;
-
-    text-decoration: none;
-
     color: #fff;
 }
 .app-card a:hover
 {
-    opacity: .9;
+    text-decoration: none;
 }
-@media (max-width: 991px)
+.app-card a:visited
 {
-    .app-card
+    text-decoration: none;
+}
+.app-cards .app-card
+{
+    position: relative;
+
+    max-width: 100%; 
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+}
+@media (min-width: 544px)
+{
+    .app-cards .app-card
     {
+        position: relative;
+
+        max-width: 50%; 
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+
         -webkit-flex: 0 0 50%;
             -ms-flex: 0 0 50%;
                 flex: 0 0 50%;
     }
 }
-@media (max-width: 767px)
+@media (min-width: 768px)
 {
-    .app-card
+    .app-cards .app-card
     {
-        -webkit-flex: 0 0 100%;
-            -ms-flex: 0 0 100%;
-                flex: 0 0 100%;
+        position: relative;
+
+        max-width: 33.3333333333%; 
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        -webkit-flex: 0 0 33.3333333333%;
+            -ms-flex: 0 0 33.3333333333%;
+                flex: 0 0 33.3333333333%;
     }
 }
 
@@ -13230,7 +13302,7 @@ body.template-frontpage-view .app-pathbar
 
 .app-card-title
 {
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 700; 
 
     -webkit-flex: 0 1 95%;
@@ -13241,7 +13313,7 @@ body.template-frontpage-view .app-pathbar
 {
     .app-card-title
     {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
 .app-card-title path
@@ -13463,6 +13535,10 @@ body.template-frontpage-view .app-pathbar
 
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFD4F3FC', endColorstr='#00000000', GradientType=1);
 }
+.app-card-banner-default
+{
+    background-image: url('../assets/img/card-default-bg.jpg');
+}
 .app-card-banner-ma
 {
     background-image: url('../assets/img/card-ma-bg.jpg');
@@ -13486,6 +13562,42 @@ body.template-frontpage-view .app-pathbar
 .app-card-banner-gp
 {
     background-image: url('../assets/img/card-gp-bg.jpg');
+}
+.app-card-banner-anaesthesie
+{
+    background-image: url('../assets/img/card-anaesthesie-bg.jpg');
+}
+.app-card-banner-geriatrie
+{
+    background-image: url('../assets/img/card-geriatrie-bg.jpg');
+}
+.app-card-banner-chirurgie
+{
+    background-image: url('../assets/img/card-chirurgie-bg.jpg');
+}
+.app-card-banner-frauenheilkunde
+{
+    background-image: url('../assets/img/card-frauenheilkunde-bg.jpg');
+}
+.app-card-banner-innere
+{
+    background-image: url('../assets/img/card-innere-bg.jpg');
+}
+.app-card-banner-urologie
+{
+    background-image: url('../assets/img/card-urologie-bg.jpg');
+}
+.app-card-banner-ueber-unsere-pflege
+{
+    background-image: url('../assets/img/card-ueber-unsere-pflege-bg.jpg');
+}
+.app-card-banner-pflege-und-leitungsphilosophie
+{
+    background-image: url('../assets/img/card-pflege-und-leitungsphilosophie-bg.jpg');
+}
+.app-card-banner-aus-fort-und-weiterbildung
+{
+    background-image: url('../assets/img/card-aus-fort-und-weiterbildung-bg.jpg');
 }
 
 .app-card-placeholder
@@ -13530,6 +13642,7 @@ body.template-frontpage-view .app-pathbar
 
 .app-subcard
 {
+    max-width: 50%;
     margin-right: 0;
     margin-bottom: 0;
     margin-left: 0;
@@ -13543,6 +13656,8 @@ body.template-frontpage-view .app-pathbar
 {
     .app-subcard
     {
+        max-width: 50%; 
+
         -webkit-flex: 0 0 50%;
             -ms-flex: 0 0 50%;
                 flex: 0 0 50%;
@@ -13552,6 +13667,8 @@ body.template-frontpage-view .app-pathbar
 {
     .app-subcard
     {
+        max-width: 100%; 
+
         -webkit-flex: 0 0 100%;
             -ms-flex: 0 0 100%;
                 flex: 0 0 100%;
@@ -13574,12 +13691,25 @@ body.template-frontpage-view .app-pathbar
 
 .card-quick .app-card-main
 {
-    background: #396191;
+    background-image: linear-gradient(to bottom, #396191 0%, #d4f3fc 100%);
+    background-repeat: repeat-x;
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF396191', endColorstr='#FFD4F3FC', GradientType=0);
 }
 
 .card-quick .app-card-content
 {
     font-size: 1rem;
+}
+
+.card-quick .app-subcard-title
+{
+    font-size: .9rem;
+}
+
+.card-quick a:hover
+{
+    opacity: .6;
 }
 
 .card-quick .subcard-tl
@@ -13599,8 +13729,8 @@ body.template-frontpage-view .app-pathbar
 
 .card-quick .logo-pray
 {
-    width: 102px;
-    height: 103px;
+    width: 86px;
+    height: 89px;
     margin: 0 auto !important;
 }
 
@@ -13621,9 +13751,9 @@ body.template-frontpage-view .app-pathbar
 
 .card-quick .logo-donation
 {
-    width: 102px;
-    height: 103px;
-    margin: 0 auto !important;
+    width: 86px;
+    height: 80px;
+    margin: .6rem auto 0 auto !important;
 }
 
 .card-quick .subcard-bl
@@ -13643,10 +13773,10 @@ body.template-frontpage-view .app-pathbar
 
 .card-quick .logo-employee
 {
-    width: 102px;
-    height: 103px;
+    width: 98px;
+    height: 87px;
     margin: 0 auto !important;
-    padding-top: 1.5rem;
+    padding-top: 1.6rem;
 }
 
 .card-quick .subcard-br
@@ -13666,8 +13796,8 @@ body.template-frontpage-view .app-pathbar
 
 .card-quick .logo-parking
 {
-    width: 102px;
-    height: 103px;
+    width: 86px;
+    height: 89px;
     margin: 0 auto !important;
     padding-top: 1rem;
 }
@@ -14331,10 +14461,10 @@ body.template-frontpage-view .app-pathbar
 .app-top
 {
     background: transparent;
-    background-image: linear-gradient(to bottom, #d4f3fc 0%, #396191 100%);
+    background-image: linear-gradient(to bottom, #396191 0%, #d4f3fc 100%);
     background-repeat: repeat-x;
 
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFD4F3FC', endColorstr='#FF396191', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF396191', endColorstr='#FFD4F3FC', GradientType=0);
 }
 
 .app-frontpage

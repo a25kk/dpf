@@ -19,21 +19,29 @@
 
 //** Base card styles
 .app-card {
-    flex: 0 0 33.3333%;
+    @include when-inside('.no-flexbox') {
+        // Fallback
+        display: table-cell;
+    }
     color: #fff;
     a {
-        font-weight: 400;
-        text-decoration: none;
         color: #fff;
     }
     a:hover {
-        opacity: 0.9;
+        text-decoration: none;
     }
-    @include media-breakpoint-down(md) {
-        flex: 0 0 50%;
+
+    a:visited {
+        text-decoration: none;
     }
-    @include media-breakpoint-down(sm) {
-        flex: 0 0 100%;
+    @include when-inside('.app-cards') {
+        @include make-col(12);
+        @include media-breakpoint-up(sm) {
+            @include make-col(6);
+        }
+        @include media-breakpoint-up(md) {
+            @include make-col(4);
+        }
     }
 }
 
@@ -54,10 +62,10 @@
 //## Title is used inside the card header
 .app-card-title {
     flex: 0 1 95%;
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 700;
     @include media-breakpoint-up(sm) {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     // Fill svg paths per default
@@ -169,6 +177,9 @@ $card-title-spacers: (
         height: 1.2rem;
         @include gradient-x($app-secondary, transparent, 0%, 100%);
     }
+    &-default {
+        background-image: url("../assets/img/card-default-bg.jpg");
+    }
     &-ma {
         background-image: url("../assets/img/card-ma-bg.jpg");
     }
@@ -187,10 +198,37 @@ $card-title-spacers: (
     &-gp {
         background-image: url("../assets/img/card-gp-bg.jpg");
     }
+    &-anaesthesie {
+        background-image: url("../assets/img/card-anaesthesie-bg.jpg");
+    }
+    &-geriatrie {
+        background-image: url("../assets/img/card-geriatrie-bg.jpg");
+    }
+    &-chirurgie {
+        background-image: url("../assets/img/card-chirurgie-bg.jpg");
+    }
+    &-frauenheilkunde {
+        background-image: url("../assets/img/card-frauenheilkunde-bg.jpg");
+    }
+    &-innere {
+        background-image: url("../assets/img/card-innere-bg.jpg");
+    }
+    &-urologie {
+        background-image: url("../assets/img/card-urologie-bg.jpg");
+    }
+    &-ueber-unsere-pflege {
+        background-image: url("../assets/img/card-ueber-unsere-pflege-bg.jpg");
+    }
+    &-pflege-und-leitungsphilosophie {
+        background-image: url("../assets/img/card-pflege-und-leitungsphilosophie-bg.jpg");
+    }
+    &-aus-fort-und-weiterbildung {
+        background-image: url("../assets/img/card-aus-fort-und-weiterbildung-bg.jpg");
+    }
 }
 
 
-//== Placeholder for missing card content
+//== Placeholder for missing card content 
 //
 //## Provide call to actions and descriptions on empty cards
 //## by providing highlighted card content
@@ -229,12 +267,15 @@ $card-title-spacers: (
     margin-right: 0;
     margin-bottom: 0;
     flex: 0 1 50%;
+    max-width: 50%;
     padding: 1.5rem;
         @include media-breakpoint-down(md) {
         flex: 0 0 50%;
+        max-width: 50%;
     }
         @include media-breakpoint-down(sm) {
             flex: 0 0 100%;
+            max-width: 100%;
         }
     path {
         fill: #fff;
@@ -248,12 +289,16 @@ $card-title-spacers: (
         flex: 0 0 100%;
     }
     .app-card-main {
-        background: $app-primary;
+        @include gradient-y($app-primary, $app-secondary, 0%, 100%);
     }
     .app-card-content {
         font-size: 1rem;
     }
     .app-subcard-title {
+        font-size: .9rem;
+    }
+    a:hover {
+        opacity: 0.6;       
     }
 
 //** quick / Subcard pray
@@ -267,8 +312,8 @@ $card-title-spacers: (
         }
 }
 .logo-pray {
-    width: 102px;
-    height: 103px;
+    width: 86px;
+    height: 89px;
     margin: 0 auto !important;
 }
 
@@ -285,9 +330,9 @@ $card-title-spacers: (
   }
 
 .logo-donation {
-    width: 102px;
-    height: 103px;
-    margin: 0 auto !important;
+    width: 86px;
+    height: 80px;
+    margin: .6rem auto 0 auto !important;
 }
 
 //** quick / Subcard employee
@@ -302,10 +347,10 @@ $card-title-spacers: (
 }
 
 .logo-employee {
-    width: 102px;
-    height: 103px;
+    width: 98px;
+    height: 87px;
     margin: 0 auto !important;
-    padding-top: 1.5rem;
+    padding-top: 1.6rem;
 }
 
 //** quick / Subcard parking
@@ -320,10 +365,9 @@ $card-title-spacers: (
 }
 
 .logo-parking {
-    width: 102px;
-    height: 103px;
+    width: 86px;
+    height: 89px;
     margin: 0 auto !important;
     padding-top: 1rem;
     }
 }
-

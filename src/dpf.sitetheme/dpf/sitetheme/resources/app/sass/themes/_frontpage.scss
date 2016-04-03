@@ -1,6 +1,6 @@
 .app-top {
 		background: transparent;
-		@include gradient-y($app-secondary, $app-primary, 0%, 100%);
+		@include gradient-y($app-primary, $app-secondary, 0%, 100%);
 }
 
 .app-frontpage {

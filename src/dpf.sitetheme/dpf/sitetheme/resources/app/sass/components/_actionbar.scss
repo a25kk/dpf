@@ -3,19 +3,25 @@
 // -------------------------------------
 
 .app-actionbar {
+  margin-top: 1rem;
 
 }
 
 .app-actions {
-  display: flex;
+  flex: 1;
   font-size: 0.85rem;
+  width: 100%;
+
+  .btn-group {
+    width: 100%;
+  }
 }
 
 .app-action {
   flex: 1;
   padding: .5rem .25rem;
   color: #fff;
-  background: $app-primary;
+  background: $app-secondary;
   text-align: center;
   &:nth-child(even) {
     color: #fff;
@@ -27,6 +33,7 @@
   flex: 1;
   color: $app-primary;
   background: $app-gray;
+  margin-bottom: .5rem;
 }
 
 .app-searchbox-group {
@@ -39,7 +46,7 @@
 
 .app-searchbox-field {
   @extend .form-control;
-  width: 66.6666%;
+  width: 75%;
   background-color: $app-gray;
   border-color: $app-gray;
     &::placeholder {
@@ -50,6 +57,30 @@
 }
 
 .app-searchbox-btn {
-  flex: 0 0 33.3333%;
-  @include button-variant(#fff, $app-secondary, $app-secondary);
+  width: 25%;
+  @include button-variant(#fff, $app-violet, $app-violet);
+  .fa {
+    margin: 0 auto;
+  }
+}
+
+.app-action-left {
+  width: 75%;
+  text-align: left;
+}
+
+.dropdown-menu {
+    padding: 1rem;
+    font-size: .9rem;
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+  }
+
+.app-action-right {
+  width: 25%;
+  background: $app-violet;
+  color: #fff;
 }
