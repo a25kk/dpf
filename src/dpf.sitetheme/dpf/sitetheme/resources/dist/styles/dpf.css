@@ -14473,6 +14473,11 @@ body.template-frontpage-view .app-pathbar
     }
 }
 
+.app-page-abstract
+{
+    font-style: italic;
+}
+
 .app-page-leadimage
 {
     margin-bottom: 2rem;
@@ -14527,6 +14532,12 @@ body.template-frontpage-view .app-pathbar
 .newsImage
 {
     margin-bottom: 1rem;
+}
+
+.newsImageContainer figcaption
+{
+    font-weight: 500;
+    font-style: italic;
 }
 
 .tileImage
