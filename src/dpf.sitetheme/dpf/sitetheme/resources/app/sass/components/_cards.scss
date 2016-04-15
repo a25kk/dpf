@@ -54,7 +54,7 @@
     height: 4.5rem;
     min-height: 4.5rem;
     padding: 1.5rem 1rem 1rem 2rem;
-    @include gradient-x($app-secondary, $app-primary, 0%, 100%);
+    @include gradient-x($app-primary, $app-secondary, 0%, 100%);
 }
 
 //== Card title
@@ -180,11 +180,11 @@ $card-title-spacers: (
     &-default {
         background-image: url("../assets/img/card-default-bg.jpg");
     }
-    &-ma {
-        background-image: url("../assets/img/card-ma-bg.jpg");
+    &-01 {
+        background-image: url("../assets/img/card-01-bg.jpg");
     }
-    &-ps {
-        background-image: url("../assets/img/card-ps-bg.jpg");
+    &-02 {
+        background-image: url("../assets/img/card-02-bg.jpg");
     }
     &-fd {
         background-image: url("../assets/img/card-fd-bg.jpg");

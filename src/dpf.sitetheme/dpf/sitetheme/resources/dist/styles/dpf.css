@@ -13372,13 +13372,13 @@ body.template-frontpage-view .app-pathbar
     min-height: 4.5rem;
     padding: 1.5rem 1rem 1rem 2rem;
 
-    background-image: linear-gradient(to right, #d4f3fc 0%, #396191 100%);
+    background-image: linear-gradient(to right, #396191 0%, #d4f3fc 100%);
     background-repeat: repeat-x;
 
     -webkit-justify-content: center;
     -ms-flex-pack: center;
             justify-content: center;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFD4F3FC', endColorstr='#FF396191', GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF396191', endColorstr='#FFD4F3FC', GradientType=1);
 }
 
 .app-card-title
@@ -13620,13 +13620,13 @@ body.template-frontpage-view .app-pathbar
 {
     background-image: url('../assets/img/card-default-bg.jpg');
 }
-.app-card-banner-ma
+.app-card-banner-01
 {
-    background-image: url('../assets/img/card-ma-bg.jpg');
+    background-image: url('../assets/img/card-01-bg.jpg');
 }
-.app-card-banner-ps
+.app-card-banner-02
 {
-    background-image: url('../assets/img/card-ps-bg.jpg');
+    background-image: url('../assets/img/card-02-bg.jpg');
 }
 .app-card-banner-fd
 {
