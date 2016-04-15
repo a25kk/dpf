@@ -24,19 +24,19 @@
 }
 
 .app-nav-list-link {
-	color: $app-secondary !important;
+	color: $app-primary !important;
 	padding: .5rem 1rem;
 	border: 0px solid red;
 	display: inline-block;
 	width: 100% !important;
 	&:hover {
-		color: darken(#fff, 10%) !important;
+		color: darken($app-primary, 10%) !important;
 		text-decoration: none;
 		background: $app-secondary;
 	}
 	&.navTreeCurrentNode {
 		color: #fff !important;
-		background: $app-secondary;
+		background: $app-primary;
 	}
 }
 

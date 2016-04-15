@@ -8,6 +8,62 @@
 }
 
 .app-page-headline {
-	font-size: 2rem;
+	font-size: 1.3rem;
 	font-weight: 700;
+	margin-bottom: 1rem;
+  margin-top: 1rem;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.5rem;
+    margin-top: 0rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 2rem;
+    margin-top: 0rem;
+  }
+}
+
+// Lead image margin
+.app-page-leadimage {
+  margin-bottom: 2rem;
+}
+
+// DEPRECATED
+// Page image container
+.app-page-image-container {
+  margin-bottom: 0;
+}
+
+
+//
+// Content specific image and media styles
+//
+// Should be removed or refacored to use proper base classes
+// e.g. app-img
+// Note: classes can easily be changed using the diazo transform chain
+// or the tinymce configuration
+.app-img {
+	@extend .img-fluid;
+  width: 100%;
+}
+
+.image-inline {
+  @extend .img-fluid;
+}
+
+.image-left {
+  @extend .img-fluid;
+}
+
+// Responsive embeds
+.app-page-embed {
+	@extend .embed-responsive;
+	margin-bottom: 1rem;
+}
+
+// DEPRECATED
+// Should be replaced with the more generic
+// .app-page-embed class
+.embed-responsive {
+  margin-bottom: 1rem;
 }

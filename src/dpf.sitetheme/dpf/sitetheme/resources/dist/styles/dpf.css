@@ -4172,6 +4172,9 @@ mark,
 }
 
 .img-fluid,
+.app-img,
+.image-inline,
+.image-left,
 .newsImage,
 .tileImage
 {
@@ -9755,7 +9758,8 @@ input[type='color'] + .input-group-addon:not(:first-child),
     color: #818a91;
 }
 
-.embed-responsive
+.embed-responsive,
+.app-page-embed
 {
     position: relative;
 
@@ -9766,10 +9770,15 @@ input[type='color'] + .input-group-addon:not(:first-child),
     padding: 0;
 }
 .embed-responsive .embed-responsive-item,
+.app-page-embed .embed-responsive-item,
 .embed-responsive iframe,
+.app-page-embed iframe,
 .embed-responsive embed,
+.app-page-embed embed,
 .embed-responsive object,
-.embed-responsive video
+.app-page-embed object,
+.embed-responsive video,
+.app-page-embed video
 {
     position: absolute;
     top: 0;
@@ -12187,13 +12196,17 @@ div.riform .label
     transition: background-color .5s ease;
     text-transform: uppercase;
 
+    color: #396191;
+}
+.template-frontpage-view .app-navitem-tab
+{
     color: #fff;
 }
 @media (min-width: 992px)
 {
     .app-navitem-tab
     {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }
 .app-navitem-tab:hover
@@ -13902,20 +13915,20 @@ body.template-frontpage-view .app-pathbar
     width: 100% !important; 
     padding: .5rem 1rem;
 
-    color: #d4f3fc !important;
+    color: #396191 !important;
     border: 0 solid red;
 }
 .app-nav-list-link:hover
 {
     text-decoration: none;
 
-    color: #e6e6e6 !important;
+    color: #2b496c !important;
     background: #d4f3fc;
 }
 .app-nav-list-link.navTreeCurrentNode
 {
     color: #fff !important;
-    background: #d4f3fc;
+    background: #396191;
 }
 
 .app-news-panel-wrapper
@@ -14429,8 +14442,55 @@ body.template-frontpage-view .app-pathbar
 
 .app-page-headline
 {
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: 700;
+
+    margin-top: 1rem; 
+    margin-bottom: 1rem;
+}
+@media (min-width: 544px)
+{
+    .app-page-headline
+    {
+        font-size: 1.5rem;
+
+        margin-top: 0rem;
+    }
+}
+@media (min-width: 992px)
+{
+    .app-page-headline
+    {
+        font-size: 2rem;
+
+        margin-top: 0rem;
+    }
+}
+
+.app-page-leadimage
+{
+    margin-bottom: 2rem;
+}
+
+.app-page-image-container
+{
+    margin-bottom: 0;
+}
+
+.app-img
+{
+    width: 100%;
+}
+
+.app-page-embed
+{
+    margin-bottom: 1rem;
+}
+
+.embed-responsive,
+.app-page-embed
+{
+    margin-bottom: 1rem;
 }
 
 .app-section-cards .app-card

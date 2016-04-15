@@ -129,14 +129,17 @@
     padding-right: 0.25rem;
     padding-left: 0.25rem;
     padding-bottom: 0.7rem;
-    color: #fff;
+    color: $app-primary;
     text-transform: uppercase;
     font-weight: 300;
     line-height: 1;
     transition: background-color 0.5s ease;
     font-size: 0.8rem;
+    @include when-inside('.template-frontpage-view') {
+        color: #fff;
+    }
      @include media-breakpoint-up(lg) {
-        font-size: 1rem;
+        font-size: 1.2rem;
      }
     &:hover {
         color: $app-violet;
