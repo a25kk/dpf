@@ -13808,9 +13808,9 @@ body.template-frontpage-view .app-pathbar
     }
 }
 
-.card-quick .logo-pray
+.card-quick .logo-download
 {
-    width: 86px;
+    width: 56px;
     height: 89px;
     margin: 0 auto !important;
 }
@@ -13830,11 +13830,11 @@ body.template-frontpage-view .app-pathbar
     }
 }
 
-.card-quick .logo-donation
+.card-quick .logo-education
 {
-    width: 86px;
-    height: 80px;
-    margin: .6rem auto 0 auto !important;
+    width: 76px;
+    height: 89px;
+    margin: 0 auto 0 auto !important;
 }
 
 .card-quick .subcard-bl
@@ -13875,12 +13875,11 @@ body.template-frontpage-view .app-pathbar
     }
 }
 
-.card-quick .logo-parking
+.card-quick .logo-news
 {
     width: 86px;
     height: 89px;
     margin: 0 auto !important;
-    padding-top: 1rem;
 }
 
 .app-card-nav .app-card-main
