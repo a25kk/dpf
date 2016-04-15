@@ -12186,7 +12186,7 @@ div.riform .label
 .app-navitem-tab
 {
     font-size: .8rem; 
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1;
 
     padding-right: .25rem;
@@ -13071,11 +13071,11 @@ img[data-sizes='auto']
 
 .flickity-page-dots
 {
-    bottom: 10px !important;
+    bottom: 20px !important;
 
-    padding-right: 1rem; 
+    padding-left: 2rem; 
 
-    text-align: right;
+    text-align: left;
 }
 
 .flickity-page-dots .dot
