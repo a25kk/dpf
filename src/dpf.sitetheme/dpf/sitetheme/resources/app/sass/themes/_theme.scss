@@ -35,6 +35,14 @@
     @include make-row();
 }
 
+.app-content-main-full {
+  @include make-col(12);
+    @include media-breakpoint-up(md) {
+        @include make-col(12);
+        padding: 0 1rem 0 0;
+    }
+}
+
 //** Add full height to layout components
 .app-content-aside,
 .app-content-main {

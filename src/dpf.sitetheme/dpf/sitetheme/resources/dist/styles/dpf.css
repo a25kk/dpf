@@ -15012,6 +15012,37 @@ body.template-frontpage-view .app-pathbar
             flex-wrap: wrap;
 }
 
+.app-content-main-full
+{
+    position: relative;
+
+    max-width: 100%; 
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+}
+@media (min-width: 768px)
+{
+    .app-content-main-full
+    {
+        position: relative;
+
+        max-width: 100%;
+        min-height: 1px;
+        padding: 0 1rem 0 0; 
+        padding-right: 15px;
+        padding-left: 15px;
+
+        -webkit-flex: 0 0 100%;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+    }
+}
+
 .app-content-aside
 {
     position: relative;

@@ -9,23 +9,26 @@
   </head>
   <body>
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
-    <div class="app-styleguide">
-      <div class="sg-aside" id="sg-aside">
-        {% include layout/sg-sidebar.html %}
-      </div>
-      <div class="sg-main">
-        <div class="sg-content" role="main">
-              {{ content }}
-        </div>
-      </div>
+    {% include components/toolbar.html %}
+    <div class="app-top">
+    {% include layout/header.html %}
     </div>
+    {% include components/pathbar.html %}
+   <main class="app-main" role="main">
+    <section class="app-content">
+        <article class="app-content-main-full">
+            {{ content }}
+        </article>
+    </section>
+</main>
 
+    {% include layout/footer.html %}
     {% include base/javascript.html %}
-    <script>
-      var navigation = responsiveNav("sg-aside", {customToggle: ".sg-nav-toggle"});
-    </script>
     <div class="app-js-slot">
         {% include base/webfonts.html %}
+    </div>
+    <div>
+        {% include base/piwik.html %}
     </div>
   </body>
 </html>
