@@ -15,6 +15,7 @@
     <theme href="dist/full/index.html" css:if-content="body.section-download" />
     <theme href="dist/full/index.html" css:if-content="body.section-news" />
     <theme href="dist/full/index.html" css:if-content="body.section-kontakt" />
+    <theme href="dist/full/index.html" css:if-content="body.section-impressum" />
     <theme href="dist/frontpage/index.html" css:if-content="body.template-frontpage-view" />
 
 
