@@ -14510,6 +14510,11 @@ body.template-frontpage-view .app-pathbar
     margin-bottom: 1rem;
 }
 
+.template-file_view .leadImage
+{
+    display: none;
+}
+
 .app-section-cards .app-card
 {
     -webkit-flex: 0 0 50%;
