@@ -18,8 +18,8 @@
 }
 
 .app-header-content {
+    @extend .container;
     @include media-breakpoint-up(md) {
-        @extend .container;
         display: flex;
     }
 }

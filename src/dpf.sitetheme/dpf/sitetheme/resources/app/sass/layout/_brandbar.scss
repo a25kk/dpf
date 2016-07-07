@@ -11,9 +11,7 @@
 }
 
 .app-brandbar-content {
-    @include media-breakpoint-up(md) {
-        @extend .container;
-    }
+    @extend .container;
 }
 
 // Make a gridrow
@@ -44,7 +42,7 @@
 }
 
 .app-brandname-logo {
-    @extend .img-responsive;
+    @extend .img-fluid;
 }
 
 .app-brandname-heading {

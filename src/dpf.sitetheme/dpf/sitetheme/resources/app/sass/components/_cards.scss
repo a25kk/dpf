@@ -245,7 +245,6 @@ $card-title-spacers: (
 //** Round hellip sign
 .app-card-placeholder-sign {
     @include size(4rem);
-    @extend .center-block;
     padding-top: 0.5rem;
     border-radius: 50%;
     border: 1px solid $gray-lighter;
