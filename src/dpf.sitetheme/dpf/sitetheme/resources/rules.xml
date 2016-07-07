@@ -403,7 +403,7 @@
             css:theme-children="#app-sidebar" />
 
         <after css:theme-children="#app-sidebar"
-          css:content-children="#viewlet-below-content" />
+          css:content-children="#app-contact-viewlet-cards" />
 
     </rules>
 
