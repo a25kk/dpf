@@ -177,8 +177,8 @@
 
         <!-- Support contact card viewlet -->
         <after css:theme="#content"
-          css:content="#app-contact-viewlet"
-          css:if-content="#app-contact-viewlet" />
+          css:content="#app-contact-viewlet-elements"
+          css:if-content="#app-contact-viewlet-elements" />
 
         <!-- Alert and portal messages -->
         <before css:content=".portalMessage" css:theme="#content" />
