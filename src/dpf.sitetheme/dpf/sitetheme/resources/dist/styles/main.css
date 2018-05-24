@@ -13169,7 +13169,7 @@ body.template-frontpage-view .app-staticbanner {
   height: 160px;
   margin-top: -78px;
   margin-right: 6rem;
-  z-index: 200000000;
+  z-index: 2000;
   position: relative;
   float: right;
 }
