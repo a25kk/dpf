@@ -8,7 +8,7 @@
     // display: flex;
     @include make-row();
     align-items: center;
-    margin-right: $spacer;
+    margin-right: 1rem;
     &-panel-inverse {
         width: 100%;
     }
@@ -30,13 +30,16 @@
 
 .app-brandname-logo {
     width: 100%;
-    margin: 2rem 0 1rem 0;
+    //margin: 1rem;
     path {
         fill: #fff;
     }
     .app-header-brandbar & {
         @include media-breakpoint-up(sm) {
         }
+    }
+    svg {
+        padding: 1rem;
     }
 }
 

@@ -26,6 +26,25 @@
       layer="..interfaces.IDpfSitecontentLayer"
       />
 
+    <!-- News Item preview card -->
+    <browser:page
+            for="plone.app.contenttypes.interfaces.INewsItem"
+            name="card-news-item"
+            class=".cards.NewsItemCardView"
+            template="card-news.pt"
+            permission="zope2.View"
+            layer="..interfaces.IDpfSitecontentLayer"
+    />
+
+    <browser:page
+            for="plone.app.contenttypes.interfaces.INewsItem"
+            name="card-news-item-preview"
+            class=".cards.NewsItemCardPreview"
+            template="card-news-preview.pt"
+            permission="zope2.View"
+            layer="dpf.sitecontent.interfaces.IDpfSitecontentLayer"
+    />
+
   <!-- Frontpage Views -->
   <browser:page
       for="plone.app.layout.navigation.interfaces.INavigationRoot"

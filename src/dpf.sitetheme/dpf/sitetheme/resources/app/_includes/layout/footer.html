@@ -19,9 +19,10 @@
     </div>
     <div class="app-copyright">
         <p>&copy; Evangelische Diakonissenanstalt Augsburg {{ site.time | date: '%Y' }} &middot;
-            <a rel="nofollow" href="/">Startseite</a> &middot;
-            <a rel="nofollow" href="/impressum">Impressum</a> &middot;
-            <a rel="nofollow" href="/kontakt">Kontakt</a>
+            <a rel="nofollow" href="{{ page.base_url }}">Startseite</a> &middot;
+            <a rel="nofollow" href="{{ page.base_url }}impressum">Impressum</a> &middot;
+            <a rel="nofollow" href="{{ page.base_url }}datenschutzerklaerung">Datenschutz</a> &middot;
+            <a rel="nofollow" href="{{ page.base_url }}kontakt">Kontakt</a>
         </p>
     </div>
 </footer>

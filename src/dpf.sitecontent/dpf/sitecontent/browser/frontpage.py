@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Module providing views for the site navigation root"""
+from Acquisition import aq_inner
 from Products.Five.browser import BrowserView
 from Products.ZCatalog.interfaces import ICatalogBrain
 from plone import api
@@ -42,6 +43,11 @@ class FrontPageView(BrowserView):
                         sort_order='reverse',
                         sort_limit=3)[:3]
         return IContentListing(items)
+
+    def rendered_news_card(self, uuid):
+        item = api.content.get(UID=uuid)
+        template = item.restrictedTraverse('@@card-news-item')()
+        return template
 
     def section_preview(self, section):
         info = {}

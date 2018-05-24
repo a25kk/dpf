@@ -45,5 +45,6 @@ validation-report.json
 .svn
 .CVS
 .idea
+.jekyll-metadata
 node_modules
 bower_components

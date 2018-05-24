@@ -1,0 +1,26 @@
+<div class="app-news-list-item">
+    <div class="app-card app-news-list-item-aside">
+            <tal:image tal:condition="context/image">
+                <div class="app-card__figure"
+                         tal:define="responsive_image python:context.restrictedTraverse('@@figure')(image_field_name='image', caption_field__name='image', scale='ratio-4:3', lqip=True, lazy_load=True)">
+                    <a class="app-card__link app-card__link--figure" href="${context/absolute_url}">
+                        <span tal:replace="structure responsive_image" />
+                    </a>
+                </div>
+            </tal:image>
+    </div>
+    <div class="app-news-list-item-main">
+        <div class="app-news-list-item-title">
+            <a href="${context/absolute_url}">
+                    ${context/Title}
+            </a>
+        </div>
+        <div class="app-news-list-item-abstract" tal:condition="python:context.Description">
+                ${context/Description}
+        </div>
+        <div class="app-news-list-item-actions">
+            <a class="app-news-list-link" href="${context/absolute_url}">
+                <span class="hidden-md-down">weiterlesen</span> <i class="fa fa-chevron-right"></i></a>
+        </div>
+    </div>
+</div>

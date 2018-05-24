@@ -3,14 +3,6 @@
 .newsImage {
   @extend.img-fluid;
   margin-bottom: 1rem;
-  width: 100%;
-}
-
-.newsImageContainer {
-  figcaption {
-    font-weight: 500;
-    font-style: italic;
-  }
 }
 
 .tileImage {
@@ -50,8 +42,7 @@
 .app-news-wrapper {
   @include make-row();
   border-bottom: 1px solid $app-gray;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
   .app-news-left {
       @include make-col(12);
   }
@@ -63,8 +54,7 @@
 .app-summary-wrapper {
   @include make-row();
   border-bottom: 1px solid $app-gray;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
   .app-summary-left {
     @include make-col(12);
     margin-bottom: 1rem;
@@ -77,6 +67,7 @@
     @include make-col(12);
     @include media-breakpoint-up(sm) {
       @include make-col(8);
+      padding-left: 2rem;
     }
   }
 }

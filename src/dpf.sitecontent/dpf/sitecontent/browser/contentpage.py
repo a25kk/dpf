@@ -3,6 +3,9 @@
 from Acquisition import aq_inner
 from Products.Five.browser import BrowserView
 from zope.component import getMultiAdapter
+from zope.component import getUtility
+
+from dpf.sitecontent.interfaces import IResponsiveImagesTool
 
 IMG = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs='
 
@@ -14,6 +17,16 @@ class ContentPageView(BrowserView):
         context = aq_inner(self.context)
         try:
             lead_img = context.image
+        except AttributeError:
+            lead_img = None
+        if lead_img is not None:
+            return True
+        return False
+
+    def has_contacts(self):
+        context = aq_inner(self.context)
+        try:
+            lead_img = context.relatedContacts
         except AttributeError:
             lead_img = None
         if lead_img is not None:
@@ -34,6 +47,10 @@ class ContentPageView(BrowserView):
         context = aq_inner(self.context)
         template = context.restrictedTraverse('@@gallery-view')()
         return template
+
+    def get_image_data(self, uuid):
+        tool = getUtility(IResponsiveImagesTool)
+        return tool.create(uuid)
 
     def image_data(self):
         data = {}
