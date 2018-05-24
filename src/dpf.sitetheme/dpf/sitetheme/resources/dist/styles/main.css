@@ -12233,6 +12233,10 @@ div.riform .label {
   padding: 1rem;
 }
 
+iframe {
+  border: none;
+}
+
 .app-default {
   color: #396191;
 }

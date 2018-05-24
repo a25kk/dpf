@@ -12,6 +12,7 @@
     <theme href="dist/signin/index.html" css:if-content="body.template-mail_password_response" />
     <theme href="dist/signin/index.html" css:if-content="body.template-pwreset_form" />
     <theme href="dist/signin/index.html" css:if-content="body.template-pwreset_finish" />
+    <theme href="dist/full/index.html" css:if-content="body.section-datenschutzerklaerung" />
     <theme href="dist/full/index.html" css:if-content="body.section-download" />
     <theme href="dist/full/index.html" css:if-content="body.section-news" />
     <theme href="dist/full/index.html" css:if-content="body.section-kontakt" />
